@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css" type = "text/css"/>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
-        <title>Document</title>
+    <title>Document</title>
 </head>
 
 <body>
-    <div class="container wholeSite">
+    <div class="container bg-light">
         <div class="row">
             <div class="col-md">
                 <h1>
@@ -22,32 +22,46 @@
             </div>
         </div>
         <div class="row">
-            <div class="container" id="content">
+            <div class="container shadow p-3 mb-5 bg-white rounded" id="content">
+                <div class="row">
+                    <div class="col-md">
+                        <h2>
+                            Generate a password
+                        </h2>
+                    </div>
+                </div>
+                <form>
                     <div class="row">
-                            <div class="col-md">
-                                <h2>
-                                    Generate a password
-                                </h2>
+                        <div class="col-md">
+                            <div class="form-group">
+                                <textarea class="form-control" readonly id="passwordsaver" rows="3"></textarea>
                             </div>
                         </div>
-                        <form>
-                        <div class="row">
-                            <div class="col-md">
-                                <div class="form-group">
-                                    <textarea class="form-control" readonly id="passwordsaver" rows="3"></textarea>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-md-4">
+                            <button type="button" onclick="passgen('passwordsaver')"
+                                class="btn btn-primary btn-lg btn-block rounded-pill p-3 mb-2 bg-danger text-white" id="passGenButton">Generate
+                                Password</button>
                         </div>
-                        <div class="row justify-content-around">
-                            <div class="col-md-4">
-                                <button type="button" onclick="passgen('passwordsaver')" class="btn btn-primary btn-lg btn-block" id="passGenButton">Generate Password</button>
-                            </div>
-                            
-                            <div class="col-md-4">
-                                <button  type="button" onclick="copytoclipboard('passwordsaver')" class="btn btn-primary btn-lg btn-block">Copy to the clipboard</button>
-                            </div>
+
+                        <div class="col-md-4">
+                            <button type="button" onclick="copytoclipboard('passwordsaver')"
+                                class="btn btn-primary btn-lg btn-block rounded-pill p-3 mb-2 bg-secondary text-white" 
+                                
+                                
+                                
+                                data-toggle="popover"
+                                data-trigger="focus" title="Dismissible popover"
+                                data-content="Text copied to the Clipboard"
+                                
+                                
+                                
+                                >Copy to the
+                                clipboard</button>
                         </div>
-                    </form>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

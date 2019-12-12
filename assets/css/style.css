@@ -3,6 +3,11 @@ h1{
     padding: 10px 0 20px;
 }
 
+#passwordsaver{
+  border-style: dashed;
+  border-width: 3px;
+}
+
 h2{
     text-align: left;
     padding: 20px;
@@ -11,13 +16,9 @@ h2{
 
 #content{
     margin: 20px;
-    background-color:blue;
+    background-color:#fff;
 }
 
 .btn{
 margin: 30px 0;
-}
-
-.wholeSite{
-    background-color:green;
 }

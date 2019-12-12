@@ -39,16 +39,16 @@ function passgen(idAux) {
             for (var i = 0; i < passwordLength; i++) {
                 switch (auxarray[Math.floor(auxarray.length * Math.random())]) {
                     case 1:
-                        console.log(generatedpassword += SpeCharArray[Math.floor(SpeCharArray.length * Math.random())])
+                        generatedpassword += SpeCharArray[Math.floor(SpeCharArray.length * Math.random())]
                         break;
                     case 2:
-                        console.log(generatedpassword += NumCharArray[Math.floor(NumCharArray.length * Math.random())])
+                        generatedpassword += NumCharArray[Math.floor(NumCharArray.length * Math.random())]
                         break;
                     case 3:
-                        console.log(generatedpassword += LowCharArray[Math.floor(LowCharArray.length * Math.random())])
+                        generatedpassword += LowCharArray[Math.floor(LowCharArray.length * Math.random())]
                         break;
                     case 4:
-                        console.log(generatedpassword += UprCharArray[Math.floor(UprCharArray.length * Math.random())])
+                        generatedpassword += UprCharArray[Math.floor(UprCharArray.length * Math.random())]
                         break;
                 }
 
@@ -67,12 +67,13 @@ function passgen(idAux) {
 
 function copytoclipboard(idAux) {
     var auxString = document.getElementById(idAux);
-    console.log(auxString)
     auxString.select();
     auxString.setSelectionRange(0, auxString.value.length);
     document.execCommand("copy");
     window.getSelection().removeAllRanges()
+    auxString.setSelectionRange(0,0);
     alert("Copied the text: " + auxString.value);
+    (idAux).popover();
 }
 
 
