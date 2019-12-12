@@ -10,9 +10,14 @@ h2{
 }
 
 #content{
+    margin: 20px;
     background-color:blue;
 }
 
 .btn{
-margin: 20px 0;
+margin: 30px 0;
+}
+
+.wholeSite{
+    background-color:green;
 }
