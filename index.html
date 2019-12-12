@@ -30,22 +30,24 @@
                                 </h2>
                             </div>
                         </div>
+                        <form>
                         <div class="row">
                             <div class="col-md">
                                 <div class="form-group">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <textarea class="form-control" id="passwordsaver" rows="3"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row justify-content-around">
                             <div class="col-md-4">
-                                <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+                                <button type="button" onclick="passgen('passwordsaver')" class="btn btn-primary btn-lg btn-block" id="passGenButton">Generate Password</button>
                             </div>
                             
                             <div class="col-md-4">
-                                <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+                                <button  type="button" class="btn btn-primary btn-lg btn-block">Copy to the clipboard</button>
                             </div>
                         </div>
+                    </form>
             </div>
         </div>
     </div>
