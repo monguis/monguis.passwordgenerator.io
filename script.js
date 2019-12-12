@@ -20,22 +20,20 @@ function passgen(idAux) {
     passwordLength = prompt("How many characters do you want your password to have? (8-128 characters allowed)");
 
     var auxarray = [];
-
     if ((passwordLength >= 8) && (passwordLength < 129)) {
-        if (confirm("would you like to have Special Characters")) {
+        if (confirm("Would you like to have Special Characters?")) {
             auxarray.push(1)
         }
-        if (confirm("would you like to have Numeric Characters")) {
+        if (confirm("Would you like to have Numeric Characters?")) {
             auxarray.push(2)
         }
-        if (confirm("would you like to have Lowercase Characters")) {
+        if (confirm("Would you like to have Lowercase Characters?")) {
             auxarray.push(3)
         }
-        if (confirm("would you like to have Uppercase Characters")) {
+        if (confirm("Would you like to have Uppercase Characters?")) {
             auxarray.push(4)
         }
         if (auxarray.length !== 0) {
-            console.log("llegue al if")
             for (var i = 0; i < passwordLength; i++) {
                 switch (auxarray[Math.floor(auxarray.length * Math.random())]) {
                     case 1:
@@ -50,18 +48,17 @@ function passgen(idAux) {
                     case 4:
                         generatedpassword += UprCharArray[Math.floor(UprCharArray.length * Math.random())]
                         break;
-                }
-
+               }
             }
-            console.log(generatedpassword);
-
         } else {
             alert("We can't build this password");
         }
-    } else {
+    }else if(passwordLength === null){
+        return;
+    }
+    else {
         alert("Please use a valid number")
     }
-
     document.getElementById(idAux).value = (generatedpassword);
 }
 
@@ -72,8 +69,8 @@ function copytoclipboard(idAux) {
     document.execCommand("copy");
     window.getSelection().removeAllRanges()
     auxString.setSelectionRange(0,0);
-    alert("Copied the text: " + auxString.value);
-    (idAux).popover();
+    alert("Password copied to the Clipboard");
+    document.getElementById(idAux).value = "Copied!!";
 }
 
 
