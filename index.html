@@ -34,7 +34,7 @@
                         <div class="row">
                             <div class="col-md">
                                 <div class="form-group">
-                                    <textarea class="form-control" id="passwordsaver" rows="3"></textarea>
+                                    <textarea class="form-control" readonly id="passwordsaver" rows="3"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                             </div>
                             
                             <div class="col-md-4">
-                                <button  type="button" class="btn btn-primary btn-lg btn-block">Copy to the clipboard</button>
+                                <button  type="button" onclick="copytoclipboard('passwordsaver')" class="btn btn-primary btn-lg btn-block">Copy to the clipboard</button>
                             </div>
                         </div>
                     </form>

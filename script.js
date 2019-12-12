@@ -13,7 +13,7 @@ var passgenclick = document.getElementById("passGenButton")
 // passgenclick.onclick = passgen();
 
 function passgen(idAux) {
-    document.getElementById(idAux).value ="";
+    document.getElementById(idAux).value = "";
     passwordLength = 0;
     generatedpassword = "";
     var count = 0;
@@ -64,4 +64,18 @@ function passgen(idAux) {
 
     document.getElementById(idAux).value = (generatedpassword);
 }
+
+function copytoclipboard(idAux) {
+    var auxString = document.getElementById(idAux);
+    console.log(auxString)
+    auxString.select();
+    auxString.setSelectionRange(0, auxString.value.length);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges()
+    alert("Copied the text: " + auxString.value);
+}
+
+
+
+
 
