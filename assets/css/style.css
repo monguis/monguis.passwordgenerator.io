@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+    padding: 10px 0 20px;
+}
+
+h2{
+    text-align: left;
+    padding: 20px;
+    border-bottom: solid lightgray;
+}
+
+#content{
+    background-color:blue;
+}
+
+.btn{
+margin: 20px 0;
+}
