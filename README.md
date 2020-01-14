@@ -13,8 +13,8 @@ This site allows you to generate a random password based on your choices(type of
   * A text Area where the password gets generated.
   * Generate password button(red).
   * Copy to the clipboard button(gray).
-* Click on the Generate a password button, then the page will prompt you a set of questions that will define the type of password generated. Once finished it will create the desire password inside the text field.
-* Now that you have a new password you can click on the Copy to clipboard button to use in different programs and sites!!
+* Click on the Generate a password button, then the page will prompt you a set of questions that will define the type of password generated. Once finished it will create the desired password inside the text field.
+* Now that you have a new password, you can click on the Copy to clipboard button to use in different programs and sites!!
 
 ## Help
 
